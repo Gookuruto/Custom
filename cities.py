@@ -1,5 +1,4 @@
 import numpy as np
-import nltk
 import string
 class City():
     def __init__(self,x,y,name):
@@ -9,7 +8,7 @@ class City():
 
 #nltk.download()
 list_city=[]
-'''
+
 list_city.append(City(52.2326863,20.7810167,"Warszawa"))
 list_city.append(City(54.360763,18.4098512,"Gdansk"))
 list_city.append(City(53.4293685,14.344447,"Szczecin"))
@@ -30,7 +29,7 @@ def odleglosc_miast(list_city):
     for j in range(x):
         for i in range(len(list_city)-1):
             print(i)
-            list_dist.append((list_city[0].name+"-"+list_city[i+1].name,np.sqrt((((list_city[i+1].x-list_city[0].x))**2)+(((np.cos((list_city[0].x*np.pi)/180)*((list_city[i+1].y-list_city[0].y)))**2)))*(40075.704/360)))
+            list_dist.append((list_city[0].name+"-"+list_city[i+1].name,1.15*np.sqrt((((list_city[i+1].x-list_city[0].x))**2)+(((np.cos((list_city[0].x*np.pi)/180)*((list_city[i+1].y-list_city[0].y)))**2)))*(40075.704/360)))
         del list_city[0]
     return list_dist
 
@@ -96,3 +95,4 @@ msg2=strxor(text.decode("hex"),a.decode("hex"))
 #r2=strxor(msg2.decode("hex"),a.decode("hex"))
 
 print msg2
+'''
